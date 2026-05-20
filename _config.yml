@@ -1,0 +1,9 @@
+title: Jack Holt
+description: Engineering notes on AI in production.
+theme: minima
+permalink: /:year/:month/:day/:title/
+
+plugins:
+  - jekyll-redirect-from
+
+linkedin_username: jackholt44

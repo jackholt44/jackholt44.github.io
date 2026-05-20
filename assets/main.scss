@@ -1,0 +1,33 @@
+---
+---
+
+@import "minima";
+
+.post-content figure {
+  margin: 2.5rem auto;
+  text-align: center;
+}
+
+.post-content figure img {
+  display: block;
+  margin: 0 auto;
+  height: auto;
+}
+
+.post-content figure figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.9em;
+  color: #555;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.post-content figure.figure-90 img { max-width: 90%; }
+.post-content figure.figure-80 img { max-width: 80%; }
+.post-content figure.figure-60 img { max-width: 60%; }
+
+// Minima echoes `site.title` as both the footer H2 and the contact-list
+// fallback when `site.author` isn't set. Drop the redundant H2.
+.site-footer .footer-heading {
+  display: none;
+}
