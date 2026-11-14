@@ -1,0 +1,15 @@
+title: Jack Holt
+description: Engineering notes on software development.
+theme: minima
+permalink: /:year/:month/:day/:title/
+
+plugins:
+  - jekyll-redirect-from
+
+linkedin_username: jackholt44
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - docker-compose.yml
+  - vendor

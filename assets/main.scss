@@ -1,0 +1,100 @@
+---
+---
+
+@import "minima";
+
+.post-content figure {
+  margin: 2.5rem auto;
+  text-align: center;
+}
+
+.post-content figure img {
+  display: block;
+  margin: 0 auto;
+  height: auto;
+}
+
+.post-content figure figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.9em;
+  color: #555;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.post-content figure.figure-90 img { max-width: 90%; }
+.post-content figure.figure-80 img { max-width: 80%; }
+.post-content figure.figure-60 img { max-width: 60%; }
+.post-content figure.figure-40 img { max-width: 40%; }
+
+// Phones: the column is already narrow, so sized figures use its full width.
+@media (max-width: 799px) {
+  .post-content figure.figure-90 img,
+  .post-content figure.figure-80 img,
+  .post-content figure.figure-60 img,
+  .post-content figure.figure-40 img { max-width: 100%; }
+}
+
+// Wide tables: sized to their content (no wrapping) and centred on the page, breaking out of the text column.
+// On narrow screens they fall back to the normal column width and wrap.
+@media (min-width: 800px) {
+  .post-content table.table-wide {
+    width: auto;
+    max-width: calc(100vw - 32px);
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+  .post-content table.table-wide th,
+  .post-content table.table-wide td {
+    white-space: nowrap;
+  }
+}
+
+// Display equations: a captioned block with breathing room above and below.
+.post-content figure.equation {
+  margin: 2rem auto;
+}
+.post-content figure.equation figcaption {
+  margin-top: 0.8rem;
+}
+
+// Wide diagrams break out of the text column, up to 1000px, centred on the page.
+.post-content figure.figure-wide {
+  width: min(1000px, calc(100vw - 32px));
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+.post-content figure.figure-wide img { max-width: 100%; }
+
+// Minima echoes `site.title` as both the footer H2 and the contact-list
+// fallback when `site.author` isn't set. Drop the redundant H2.
+.site-footer .footer-heading {
+  display: none;
+}
+
+// Phones: a table wider than the text column scrolls sideways inside its own box,
+// so it cannot widen the page and push the rest of the text to the left.
+@media (max-width: 799px) {
+  .post-content table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+// Display equations wider than the column scroll sideways too.
+.post-content mjx-container[display="true"] {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+// Callouts (blockquotes): space above and below, and inner padding, so they stand apart from the text.
+.post-content blockquote {
+  margin: 2.25rem 0;
+  padding: 0.9rem 1.25rem;
+}
+.post-content blockquote > :last-child {
+  margin-bottom: 0;
+}

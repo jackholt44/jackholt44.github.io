@@ -1,0 +1,19 @@
+# Local preview of the GitHub Pages site.
+#   docker compose up      -> http://localhost:4000 (drafts with published: false included)
+#   docker compose down    -> stop
+services:
+  jekyll:
+    image: ruby:3.3
+    working_dir: /srv/jekyll
+    volumes:
+      - .:/srv/jekyll
+      - bundle:/usr/local/bundle
+    ports:
+      - "4000:4000"
+      - "35729:35729"
+    command: >
+      sh -c "bundle install &&
+             bundle exec jekyll serve --host 0.0.0.0 --unpublished --livereload --force_polling"
+
+volumes:
+  bundle:
