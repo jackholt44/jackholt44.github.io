@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "excalidraw": {
+      "type": "http",
+      "url": "https://api.excalidraw.com/api/v1/mcp?toolsets=drawing",
+      "headersHelper": "/bin/zsh /Users/jackholt/jackholt44.github.io/.claude/excalidraw-headers.sh"
+    }
+  }
+}
